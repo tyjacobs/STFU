@@ -11,6 +11,8 @@
 		D8B874D5285FAC1F00321C8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B874D4285FAC1F00321C8A /* ViewController.swift */; };
 		D8B874D7285FAC2000321C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B874D6285FAC2000321C8A /* Assets.xcassets */; };
 		D8B874DA285FAC2000321C8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B874D8285FAC2000321C8A /* Main.storyboard */; };
+		D8B874E2285FAD5000321C8A /* SoundResultsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B874E1285FAD5000321C8A /* SoundResultsObserver.swift */; };
+		D8B874E7285FD2C200321C8A /* STFU.wav in Resources */ = {isa = PBXBuildFile; fileRef = D8B874E6285FD2C200321C8A /* STFU.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		D8B874D6285FAC2000321C8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8B874D9285FAC2000321C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8B874DB285FAC2000321C8A /* STFU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = STFU.entitlements; sourceTree = "<group>"; };
+		D8B874E1285FAD5000321C8A /* SoundResultsObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundResultsObserver.swift; sourceTree = "<group>"; };
+		D8B874E3285FC1EE00321C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D8B874E6285FD2C200321C8A /* STFU.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = STFU.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +57,14 @@
 		D8B874D1285FAC1F00321C8A /* STFU */ = {
 			isa = PBXGroup;
 			children = (
+				D8B874E3285FC1EE00321C8A /* Info.plist */,
 				D8B874D2285FAC1F00321C8A /* AppDelegate.swift */,
 				D8B874D4285FAC1F00321C8A /* ViewController.swift */,
+				D8B874E1285FAD5000321C8A /* SoundResultsObserver.swift */,
 				D8B874D6285FAC2000321C8A /* Assets.xcassets */,
 				D8B874D8285FAC2000321C8A /* Main.storyboard */,
 				D8B874DB285FAC2000321C8A /* STFU.entitlements */,
+				D8B874E6285FD2C200321C8A /* STFU.wav */,
 			);
 			path = STFU;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B874D7285FAC2000321C8A /* Assets.xcassets in Resources */,
+				D8B874E7285FD2C200321C8A /* STFU.wav in Resources */,
 				D8B874DA285FAC2000321C8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +142,7 @@
 			files = (
 				D8B874D5285FAC1F00321C8A /* ViewController.swift in Sources */,
 				D8B874D3285FAC1F00321C8A /* AppDelegate.swift in Sources */,
+				D8B874E2285FAD5000321C8A /* SoundResultsObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +285,11 @@
 				DEVELOPMENT_TEAM = 422TDDF67Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = STFU/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "STFU and let me use the mic";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,8 +315,11 @@
 				DEVELOPMENT_TEAM = 422TDDF67Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = STFU/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "STFU and let me use the mic";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
