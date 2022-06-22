@@ -11,15 +11,53 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="STFU" id="1Xt-HY-uBw">
+                            <menuItem image="Listening" id="1Xt-HY-uBw">
+                                <attributedString key="attributedTitle"/>
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="STFU" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="About STFU" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
+                                        </menuItem>
+                                        <menuItem title="Pause" id="zcu-bW-wbO">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="pauseAction:" target="Voe-Tx-rLC" id="bHs-8Y-w2J"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Sensitivity" id="FbV-ZA-omo">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Sensitivity" id="0fK-Ya-0nh">
+                                                <items>
+                                                    <menuItem title="Low" tag="1" id="1gw-Pu-wfe">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setSensitivity:" target="Voe-Tx-rLC" id="yMw-QU-Kvc"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Medium" state="on" tag="2" id="Lr0-33-q2w">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setSensitivity:" target="Voe-Tx-rLC" id="W7r-63-5Gp"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Extra Medium" tag="3" id="e15-KK-BG1">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setSensitivity:" target="Voe-Tx-rLC" id="DZ6-pB-fid"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="High" tag="4" id="Eu0-Ep-47f">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setSensitivity:" target="Voe-Tx-rLC" id="H29-yt-ZXm"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
                                         <menuItem title="Quit STFU" keyEquivalent="q" id="4sb-4s-VLi">
@@ -39,6 +77,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="STFU" customModuleProvider="target">
                     <connections>
                         <outlet property="menu" destination="uQy-DD-JDr" id="1rA-2I-kJm"/>
+                        <outlet property="pauseMenuItem" destination="zcu-bW-wbO" id="JYn-nI-NJT"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -51,11 +90,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="STFU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="677" height="119"/>
+                        <rect key="frame" x="0.0" y="0.0" width="236" height="119"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oKK-Z1-sgq">
-                                <rect key="frame" x="265" y="23" width="148" height="74"/>
+                                <rect key="frame" x="44" y="23" width="148" height="74"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="STFU" id="zYx-nq-ghz">
                                     <font key="font" size="64" name="TrebuchetMS"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -74,7 +113,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="194"/>
+            <point key="canvasLocation" x="149" y="272"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Listening" width="20" height="20"/>
+    </resources>
 </document>

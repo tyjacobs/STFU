@@ -11,13 +11,14 @@ import SoundAnalysis
 class SoundResultsObserver: NSObject, SNResultsObserving {
     
     public var currentResult: String = String()
+    public var sensitivity: Double = 0.4
 
     func request(_ request: SNRequest, didProduce result: SNResult) {
 
         guard let result = result as? SNClassificationResult else  { return }
         guard let classification = result.classifications.first else { return }
         
-        if (classification.confidence > 0.5) {
+        if (classification.confidence > sensitivity) {
             currentResult = classification.identifier
         }
         else {
@@ -26,10 +27,10 @@ class SoundResultsObserver: NSObject, SNResultsObserving {
     }
 
     func request(_ request: SNRequest, didFailWithError error: Error) {
-        print("The the analysis failed: \(error.localizedDescription)")
+        //print("The the analysis failed: \(error.localizedDescription)")
     }
 
     func requestDidComplete(_ request: SNRequest) {
-        print("The request completed successfully!")
+        //print("The request completed successfully!")
     }
 }
